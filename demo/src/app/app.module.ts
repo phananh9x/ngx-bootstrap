@@ -19,12 +19,14 @@ import { DocsModule } from './docs';
 import { NgApiDoc } from './docs/api-docs/api-docs.model';
 import { StyleManager } from './theme/style-manager';
 import { ThemeStorage } from './theme/theme-storage';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [AppComponent, DocumentationComponent, TopMenuComponent, LandingComponent],
   imports: [
     BrowserAnimationsModule,
     DocsModule,
+    CommonModule,
     FormsModule,
     HttpClientModule,
     RouterModule.forRoot(routes, { useHash: environment.useHash }),
